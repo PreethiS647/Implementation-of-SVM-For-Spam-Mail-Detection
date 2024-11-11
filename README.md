@@ -26,9 +26,11 @@ file='spam.csv'
 with open (file,'rb') as rawdata:
     result = chardet.detect(rawdata.read(100000))
 result
-
+```
+```
 import pandas as pd
 df=pd.read_csv("spam.csv",encoding='Windows-1252')
+```
 
 df.head()
 
