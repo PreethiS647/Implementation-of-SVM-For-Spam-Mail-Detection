@@ -26,19 +26,19 @@ file='spam.csv'
 with open (file,'rb') as rawdata:
     result = chardet.detect(rawdata.read(100000))
 result
-```
+
 import pandas as pd
 df=pd.read_csv("spam.csv",encoding='Windows-1252')
-```
+
 df.head()
-```
+
 df.info()
-```
+
 df.isnull().sum()
-```
+
 x=df['v2'].values
 y=df['v1'].values
-```
+
 from sklearn.model_selection import train_test_split
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=0)
 
@@ -56,11 +56,11 @@ svc.fit(x_train,y_train)
 y_pred=svc.predict(x_test)
 y_pred
 
-```
+
 from sklearn import metrics
 accuracy=metrics.accuracy_score(y_test,y_pred)
 accuracy
-```
+
 
 ## Output:
 ![SVM For Spam Mail Detection](sam.png)
